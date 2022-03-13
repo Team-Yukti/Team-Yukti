@@ -53,14 +53,14 @@
                 <!-- active & hover classes 'text-gray-700 dark:text-light' -->
                 <!-- inActive classes 'text-gray-400 dark:text-gray-400' -->
                 <a href="index.html" role="menuitem"
-                  class="block p-2 text-sm text-gray-700 transition-colors duration-200 rounded-md dark:text-light dark:hover:text-light hover:text-gray-700">
+                  class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700">
                   Complaint Registeration
                 </a>
                 <a href="/public/status.html" role="menuitem"
-                  class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700">
+                  class="block p-2 text-sm text-gray-700 transition-colors duration-200 rounded-md dark:text-light dark:hover:text-light hover:text-gray-700">
                   Tracking Status
                 </a>
-                <a href="" role="menuitem"
+                <a href="#" role="menuitem"
                   class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700">
                   Help
                 </a>
@@ -466,48 +466,88 @@
           </div>
         </header>
 
-        <!-- Main content -->
-        <main style="margin: 5% 0 10% 30%;">
-          <a href="../index.html"
-            class="inline-block mb-6 text-3xl font-bold tracking-wider uppercase text-primary-dark dark:text-light"
-            style="margin: 0 0 5% 5% ">
-            Register Complaint
-          </a>
+
+         <!-- Main content -->
+         <main>
           <!-- Content header -->
-          <div class="w-full max-w-sm px-4 py-6 space-y-6 bg-white rounded-md dark:bg-darker">
-            <h1 class="text-xl font-semibold text-center">Complaint Details</h1>
-            <form action="#" class="space-y-6">
-              <input
-                class="w-full px-4 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker"
-                type="text" name="employee-id" placeholder="Employee ID" required />
-              <input
-                class="w-full px-4 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker"
-                type="text" name="Organisation" placeholder="Organisation Name" required />
-              <input
-                class="w-full px-4 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker"
-                type="text" name="Organisation-id" placeholder="Organisation CIN" required />
-              <input
-                class="w-full px-4 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker"
-                type="text" name="comp-against" placeholder="Complaint Against" required />
-              <select name="complaint-type" id="cars"
-                class="w-full px-4 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker">
-                <option value="salary">Salary</option>
-                <option value="pension">Pension</option>
-                <option value="harassment">Harassment</option>
-                <option value="verb-abuse">Verbal Abuse</option>
-              </select>
-              <input
-                class="w-full px-4 py-2 border rounded-md dark:bg-darker dark:border-gray-700 focus:outline-none focus:ring focus:ring-primary-100 dark:focus:ring-primary-darker"
-                type="file" name="complaint-file" required />
-              <div>
-                <button type="submit"
-                  class="w-full px-4 py-2 font-medium text-center text-white transition-colors duration-200 rounded-md bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1 dark:focus:ring-offset-darker">
-                  Submit
-                </button>
-              </div>
-            </form>
+          <div class="flex items-center justify-between px-4 py-4 border-b lg:py-6 dark:border-primary-darker">
+            <h1 class="text-2xl font-semibold">Your Complaint Status</h1>
+           
+          </div>
+
+          <!-- Content -->
+          <div class="mt-2">
+              <ol class="progtrckr" data-progtrckr-steps="5">
+                  <li class="progtrckr-done">Complaint Registered</li><!--
+               --><li class="progtrckr-done">Complaint accepted</li><!--
+               --><li class="progtrckr-done">Complaint routed</li><!--
+               --><li class="progtrckr-todo">Under review</li><!--
+               --><li class="progtrckr-todo">Resolved</li>
+              </ol>
+              
+              <style>
+                  ol.progtrckr {
+                  margin: 20px 0;
+                  padding: 50px;
+
+              }
+              
+              ol.progtrckr li {
+                  display: inline-block;
+                  text-align: center;
+                  line-height: 3.5em;
+              }
+              
+              ol.progtrckr[data-progtrckr-steps="2"] li { width: 49%; }
+              ol.progtrckr[data-progtrckr-steps="3"] li { width: 33%; }
+              ol.progtrckr[data-progtrckr-steps="4"] li { width: 24%; }
+              ol.progtrckr[data-progtrckr-steps="5"] li { width: 19%; }
+              ol.progtrckr[data-progtrckr-steps="6"] li { width: 16%; }
+              ol.progtrckr[data-progtrckr-steps="7"] li { width: 14%; }
+              ol.progtrckr[data-progtrckr-steps="8"] li { width: 12%; }
+              ol.progtrckr[data-progtrckr-steps="9"] li { width: 11%; }
+              
+              ol.progtrckr li.progtrckr-done {
+                  color: black;
+                  border-bottom: 4px solid rgb(81, 167, 31);
+              }
+              ol.progtrckr li.progtrckr-todo {
+                  color: silver; 
+                  border-bottom: 4px solid silver;
+              }
+              
+              ol.progtrckr li:after {
+                  content: "\00a0\00a0";
+              }
+              ol.progtrckr li:before {
+                  position: relative;
+                  bottom: -2.5em;
+                  float: left;
+                  left: 50%;
+                  line-height: 1em;
+              }
+              ol.progtrckr li.progtrckr-done:before {
+                  content: "\2713";
+                  color: white;
+                  background-color: rgb(81, 167, 31);
+                  height: 2.2em;
+                  width: 2.2em;
+                  line-height: 2.2em;
+                  border: none;
+                  border-radius: 2.2em;
+              }
+              ol.progtrckr li.progtrckr-todo:before {
+                  content: "\039F";
+                  color: silver;
+                  background-color: rgb(243,244,246);
+                  font-size: 2.2em;
+                  bottom: -1.2em;
+              }
+              
+              
+              </style>
+          </div>
         </main>
-      
       </div>
 
       <!-- Panels -->
