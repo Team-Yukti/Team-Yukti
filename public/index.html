@@ -56,7 +56,7 @@
                   class="block p-2 text-sm text-gray-700 transition-colors duration-200 rounded-md dark:text-light dark:hover:text-light hover:text-gray-700">
                   Complaint Registeration
                 </a>
-                <a href="/public/status.html" role="menuitem"
+                <a href="status.html" role="menuitem"
                   class="block p-2 text-sm text-gray-400 transition-colors duration-200 rounded-md dark:hover:text-light hover:text-gray-700">
                   Tracking Status
                 </a>
@@ -857,8 +857,10 @@
         return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches
       }
 
+      window.localStorage.setItem('dark', false)
+
       const setTheme = (value) => {
-        //window.localStorage.setItem('dark', value)
+        // window.localStorage.setItem('dark', value)
       }
 
       const getColor = () => {

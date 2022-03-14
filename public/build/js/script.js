@@ -91,7 +91,7 @@ const barChart = new Chart(document.getElementById('barChart'), {
 const doughnutChart = new Chart(document.getElementById('doughnutChart'), {
   type: 'doughnut',
   data: {
-    labels: ['Oct', 'Nov', 'Dec'],
+    labels: ['Salary', 'Harrasment', 'Pension'],
     datasets: [
       {
         data: [random(), random(), random()],
